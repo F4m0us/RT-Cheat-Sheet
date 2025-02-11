@@ -4,7 +4,7 @@ echo [string] | base64
 Decode :
 echo [b64-encoded-string] | base64 -d
 
-## Hex
+## Hex
 Encode :
 echo [string] | xxd -p
 Decode :
