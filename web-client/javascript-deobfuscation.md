@@ -11,11 +11,7 @@
   - Open the **Console** tab to test JavaScript code  
   - Use the **Sources** tab to locate and format JavaScript files  
 - **Find JavaScript in Network Requests**:  
-  - Open **DevTools** → **Network** → **JS** to see loaded scripts  
-- **Extract JavaScript from Webpages**:  
-  - [JSConsole](https://jsconsole.com/) – Execute JavaScript from an external console  
-  - [Toptal Minifier](https://www.toptal.com/developers/javascript-minifier) – Minify/Beautify JavaScript  
-  - [Wappalyzer](https://www.wappalyzer.com/) – Identify technologies & JavaScript frameworks used  
+  - Open **DevTools** → **Network** → **JS** to see loaded scripts    
 - **Download JavaScript Files**:  
   - Manually from the **Sources** tab in DevTools  
   - Use `wget` or `curl`:  
@@ -27,7 +23,25 @@
     ```
 - **Use a Proxy to Intercept JavaScript**:  
   - [Burp Suite](https://portswigger.net/burp) – Inspect and modify JavaScript requests  
-  - [mitmproxy](https://mitmproxy.org/) – Intercept & analyze JavaScript in HTTP/HTTPS traffic  
+  - [mitmproxy](https://mitmproxy.org/) – Intercept & analyze JavaScript in HTTP/HTTPS traffic    
+
+## ✨ Analyzing JavaScript Code
+Use these tools to make minified or compressed JavaScript more readable:  
+
+- [Prettier Playground](https://prettier.io/playground/) – Automatic code formatting  
+- [JS Beautifier](https://beautifier.io/) – Beautifies and formats JavaScript code
+- [Toptal Minifier](https://www.toptal.com/developers/javascript-minifier) – Minify/Beautify JavaScript
+- [JSConsole](https://jsconsole.com/) – Execute JavaScript from an external console
+
+## 🛠 Deobfuscation Tools  
+These tools help reverse JavaScript obfuscation and restore original code:  
+
+- [unPacker](https://matthewfl.com/unPacker.html)
+- [Deobfuscate.io](https://deobfuscate.io/)  
+- [Relative.im Deobfuscator](https://deobfuscate.relative.im/)  
+- [dCode JavaScript Unobfuscator](https://www.dcode.fr/javascript-unobfuscator)  
+- [de4js](https://lelinhtinh.github.io/de4js/)
+- [Synchrony (GitHub)](https://github.com/relative/synchrony)
 
 ## 🎭 Common JavaScript Obfuscators  
 Obfuscators transform JavaScript into an unreadable format. Here are some common ones:  
@@ -36,20 +50,4 @@ Obfuscators transform JavaScript into an unreadable format. Here are some common
 - [Obfuscator.io](https://obfuscator.io/)  
 - [JSFuck (Extreme Obfuscation)](https://jsfuck.com/)  
 - [JJEncode](https://utf-8.jp/public/jjencode.html)  
-- [AAEncode](https://utf-8.jp/public/aaencode.html)  
-
-## ✨ Beautifying JavaScript Code  
-Use these tools to make minified or compressed JavaScript more readable:  
-
-- [Prettier Playground](https://prettier.io/playground/) – Automatic code formatting  
-- [JS Beautifier](https://beautifier.io/) – Beautifies and formats JavaScript code  
-
-## 🛠 Deobfuscation Tools  
-These tools help reverse JavaScript obfuscation and restore original code:  
-
-- [unPacker](https://matthewfl.com/unPacker.html) – Detects and unpacks common JavaScript obfuscation methods  
-- [Deobfuscate.io](https://deobfuscate.io/)  
-- [Relative.im Deobfuscator](https://deobfuscate.relative.im/)  
-- [dCode JavaScript Unobfuscator](https://www.dcode.fr/javascript-unobfuscator)  
-- [de4js](https://lelinhtinh.github.io/de4js/) – Interactive JavaScript deobfuscation tool  
-- [Synchrony (GitHub)](https://github.com/relative/synchrony) – JavaScript deobfuscation library  
+- [AAEncode](https://utf-8.jp/public/aaencode.html)
