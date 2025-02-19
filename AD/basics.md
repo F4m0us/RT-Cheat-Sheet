@@ -104,3 +104,31 @@ An **FQDN** specifies a computer’s **hostname** and **domain name** (e.g., `DC
 ## Tombstone
 A **tombstone** is a **soft-deleted** AD object. It remains in AD for a **Tombstone Lifetime** (default: **60-180 days**) before **permanent deletion**.
 
+# Trusts
+
+A **trust** in Active Directory is used to establish authentication between forests or domains. It allows users to access resources or administer systems in a different domain than the one where their account resides. Essentially, a trust creates a link between the authentication systems of two domains.
+
+There are several types of trusts in Active Directory, each serving different purposes:
+
+| **Trust Type**       | **Description**                                                                                       |
+|----------------------|-------------------------------------------------------------------------------------------------------|
+| **Parent-child**      | Establishes a trust between domains within the same forest. The child domain has a two-way, transitive trust with the parent domain. |
+| **Cross-link**        | A trust between child domains to speed up authentication processes.                                  |
+| **External**          | A non-transitive trust between two separate domains in different forests that are not connected by a forest trust. This trust utilizes SID filtering. |
+| **Tree-root**         | A two-way, transitive trust between a forest root domain and a new tree root domain. This trust is automatically created when setting up a new tree root domain within a forest. |
+| **Forest**            | A transitive trust between two forest root domains, enabling full authentication and access between forests. |
+
+# AD Roles
+
+Active Directory also uses specific roles to manage various aspects of domain and forest operations. These roles are assigned to Domain Controllers (DCs) in the environment:
+
+| **Role**              | **Description**                                                                                       |
+|-----------------------|-------------------------------------------------------------------------------------------------------|
+| **Schema Master**      | Manages the read/write copy of the AD schema, which defines all possible attributes that can be applied to objects in AD. |
+| **Domain Naming Master** | Ensures that domain names within the forest are unique and prevents the creation of domains with duplicate names. |
+| **Relative ID (RID) Master** | Assigns blocks of RIDs (Relative Identifiers) to other DCs in the domain for use in creating new objects. This ensures that objects have unique Security Identifiers (SIDs). |
+| **PDC Emulator**       | Acts as the authoritative DC for authentication requests, password changes, and managing Group Policy Objects (GPOs). It also maintains time synchronization within the domain. |
+| **Infrastructure Master** | Translates GUIDs, SIDs, and DNs between domains, particularly in multi-domain forests. If this role fails, Access Control Lists (ACLs) will display SIDs instead of fully resolved names. |
+
+
+
